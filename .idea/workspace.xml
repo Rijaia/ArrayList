@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84b0145c-3fd9-4ed2-a073-2872e843dd19" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exeptions/IntegerListIsFull.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exeptions/NoNeedInteger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/integerList/IntegerList.java" afterDir="false" />
+    <list default="true" id="84b0145c-3fd9-4ed2-a073-2872e843dd19" name="Changes" comment="IntegerList">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exeptions/ExceptionOfListNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exeptions/ExceptionOfListNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exeptions/NoNeedString.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exeptions/StringIsNull.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exeptions/StringListIsFull.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/stringList/StringList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/stringList/StringListImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/integerList/IntegerListImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/integerList/IntegerList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/integerList/IntegerList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/integerList/IntegerListImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/integerList/IntegerListImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +33,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -68,11 +59,24 @@
       <option name="presentableId" value="Default" />
       <updated>1688022212069</updated>
       <workItem from="1688022213080" duration="2000" />
-      <workItem from="1689411901305" duration="3196000" />
+      <workItem from="1689411901305" duration="7297000" />
     </task>
+    <task id="LOCAL-00001" summary="IntegerList">
+      <option name="closed" value="true" />
+      <created>1689415276223</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689415276223</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="IntegerList" />
+    <option name="LAST_COMMIT_MESSAGE" value="IntegerList" />
   </component>
 </project>

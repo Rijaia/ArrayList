@@ -34,7 +34,7 @@ public class IntegerListImpl implements IntegerList {
         if(item == null){
             throw new ExceptionOfListNumber.IntegerIsNull();
         } if (index > size) {
-            throw new ExceptionOfListNumber();
+            grow(arrayInteger);
         }
         arrayInteger [index] = item;
         return item;
@@ -124,7 +124,7 @@ public class IntegerListImpl implements IntegerList {
         if (arrayInteger.length == otherList.size()) {
             for (int i = 0; i <= size-1; i++) {
                 for (int j = 0; j <= otherList.size() - 1; j++) {
-                    if (arrayInteger[i] == otherList[j]) {
+                    if (arrayInteger[i].equals(otherList[j])) {
                         return true;
                     }
                 }
@@ -140,9 +140,9 @@ public class IntegerListImpl implements IntegerList {
     }
 
     @Override
-    public boolean isEmpty() {
+    public boolean isEmpty(Integer[] arrayInteger) {
         for (int i = 0; i <= size-1; i++) {
-            if (arrayInteger[i]==null) {
+            if (this.arrayInteger[i]==null) {
                 return true;
             }
         }
@@ -165,35 +165,67 @@ public class IntegerListImpl implements IntegerList {
         return Integer;
     }
 
-    private void sort(Integer[] arr) {
-        for (int i = 1; i < arr.length; i++) {
-            int temp = arr[i];
-            int j = i;
-            while (j > 0 && arr[j - 1] >= temp) {
-                arr[j] = arr[j - 1];
-                j--;
+    private void sort(Integer[] arrayInteger) {
+        if (arrayInteger.length < 2) {
+            return;
+        }
+        Integer mid = arrayInteger.length/2;
+        Integer[] left = new Integer[mid];
+        Integer[] right = new Integer[arrayInteger.length - mid];
+        for (int i = 0; i < left.length; i++) {
+            left[i] = arrayInteger [i];
+        }
+        for (int i = 0; i < right.length; i++) {
+            right[i] = arrayInteger [mid =i];
+        }
+        sort(left);
+        sort(right);
+        merge(arrayInteger,left,right);
+    }
+    public static void merge(Integer[] arrayInteger, Integer[] left, Integer[] right) {
+
+        int mainP = 0;
+        int leftP = 0;
+        int rightP = 0;
+        while (leftP < left.length && rightP < right.length) {
+            if (left[leftP] <= right[rightP]) {
+                arrayInteger[mainP++] = left[leftP++];
+            } else {
+                arrayInteger[mainP++] = right[rightP++];
             }
-            arr[j] = temp;
+        }
+        while (leftP < left.length) {
+            arrayInteger[mainP++] = left[leftP++];
+        }
+        while (rightP < right.length) {
+            arrayInteger[mainP++] = right[rightP++];
         }
     }
 
-    private boolean binarySearch(Integer[] arr, Integer Item) {
+    private boolean binarySearch(Integer[] arrayInteger, Integer Item) {
         int min = 0;
-        int max = arr.length - 1;
+        int max = arrayInteger.length - 1;
 
         while (min <= max) {
             int mid = (min + max) / 2;
 
-            if (Item == arr[mid]) {
+            if (Item == arrayInteger[mid]) {
                 return true;
             }
 
-            if (Item < arr[mid]) {
+            if (Item < arrayInteger[mid]) {
                 max = mid - 1;
             } else {
                 min = mid + 1;
             }
         }
         return false;
+    }
+
+    private Integer[] grow(Integer[] arrayInteger) {
+        if (isEmpty(arrayInteger) == false) {
+            System.arraycopy(arrayInteger,0,arrayInteger[(int) (1.5*size)],0,arrayInteger.length);
+        }
+        return arrayInteger;
     }
 }

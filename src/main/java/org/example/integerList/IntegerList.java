@@ -12,7 +12,7 @@ public interface IntegerList {
     Integer get(int index);
     boolean equals(IntegerList otherList);
     int size();
-    boolean isEmpty();
+    boolean isEmpty(Integer[] arrayInteger);
     void clear();
     Integer[] toArray();
 
